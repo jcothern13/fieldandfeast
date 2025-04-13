@@ -1,6 +1,7 @@
 /* CSS BY JASON COTHERN */
 
 /* IMPORTED FONTS */
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 /* CSS REST */
@@ -53,6 +54,7 @@ table {
 }
 
 /* ROOT VARIABLES */
+
 :root{
     --font: Playfair Display, serif;
 
@@ -63,10 +65,8 @@ table {
     --dark-charcoal: #2B2B2B;
     --soft-white: #FAF9F6;
 }
+
 /* GLOBAL STYLES (mobile first/small) */
-*{
-    box-sizing: border-box;
-}
 
 body{
     max-width: 400px;
@@ -77,6 +77,9 @@ body{
     line-height: 1.5;
 }
 
+main{
+    padding: 1.5rem;
+}
 
 header{
     background-color: var(--midnight-blue);
@@ -88,29 +91,23 @@ header img{
     width: 50%;
 }
 
-main{
-    padding: 1.5rem 1rem;
-}
-
 h1{
+    line-height: 1.2;
     font-size: 2rem;
 }
-h2, h3{
+
+h2, h3 {
+    line-height: 1.2;
     font-size: 1.5rem;
-  }
+}
 
 h3{
     font-weight: bold;
 }  
 
-h1, h2, h3 {
-    line-height: 1.2;
-  }
-  
 header p{
     font-style: italic;
 }
-
 
 nav ul{
     background-color: var(--champagne-gold);
@@ -118,7 +115,6 @@ nav ul{
     justify-content: space-evenly;
     gap: 1rem;
     padding: 0.75rem 0.5rem;
-    
 }
 
 nav a {
@@ -131,7 +127,6 @@ nav a {
     padding: 2rem 0 1rem 0;
 }
 
-
 #about-us p{
     font-size: 1rem;
     line-height: 1.6;
@@ -140,25 +135,28 @@ nav a {
     margin-bottom: 0.5rem;
 }
 
+#offerings {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    border-bottom: 2px solid var(--champagne-gold);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
 
 #offerings section{
     background-color: var(--olive-green);
     color: var(--linen);
     padding: 1rem;
-    margin-bottom: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 10px var(--dark-charcoal);
 }
-
-#offerings {
-    border-bottom: 2px solid var(--champagne-gold);
-}
-
 
 #offerings ul {
 	margin-top: 0.5rem;
 	padding-left: 1rem;
 }
+
 #offerings li {
 	list-style-type: disc;
 	margin-bottom: 0.5rem;
@@ -182,7 +180,7 @@ nav a {
     margin-bottom: 0.5rem;
 }
 
-#gallery figure{
+figure{
 	text-align: center;
 	margin-bottom: 1rem;
     background-color: var(--soft-white);
@@ -197,7 +195,6 @@ nav a {
     display: block;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-	
 }
 
 #gallery figcaption {
@@ -218,38 +215,41 @@ footer a{
     text-decoration: none;
 }
 
-
 /* MEDIA QUERY (medium) */
 
 @media (min-width: 600px) {
-    body {
+    body{
         max-width: 600px;
     }
 
+    header img{
+        width: 200px;
+        max-width: 100%;
+    }
 
     header p{
         padding-bottom: 1rem;
     }
+
     h1{
         font-size: 2.5rem;
-    }  
-    main {
-        padding: 1rem;
-    }  
-    /* OFFERINGS SECTION */
-    #offerings {
+    }   
+    
+    #offerings{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
-    }  
-    #offerings h2 {
-        grid-column: 1 / -1; /* full width above the grid */
     }
+
+    #offerings h2{
+        grid-column: 1 / -1;
+    }
+
     #monthly{
         grid-column: 1 / -1;
     }
-    /* GALLERY SECTION */
-    #gallery {
+
+    #gallery{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
@@ -257,6 +257,7 @@ footer a{
     #gallery h2{
         margin-top: 1.5rem;
     }
+    
     #gallery h2, #gallery p {
         grid-column: 1 / -1;
     }
@@ -265,38 +266,26 @@ footer a{
       text-align: center;
       padding: 1rem;
     }
+
     #gallery a {
     grid-column: 1 / -1;
     }
   }
   
-
 /* MEDIA QUERY (large) */
+
 @media (min-width: 900px) {
     body {
         max-width: 900px;
-    }
-    header img{
-        width: 200px;
-        max-width: 100%;
-    }
-   
-    main{
-        margin: 0 auto;
-        max-width: 850px;
-    }
-
-    #offerings section{
-        padding: 1rem;
     }
 
     #gallery{
         grid-template-columns: 1fr 1fr 1fr;
         margin-bottom: 1.5rem;
     }
-
 } 
 /* MEDIA QUERY (xl) */
+
 @media (min-width: 1200px){
     body{
         max-width: 1200px;
